@@ -23,7 +23,7 @@ And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    webazin\comment\commentServiceProvider::class
+    webazin\Comment\CommentServiceProvider::class
 ];
 ```
 
@@ -48,12 +48,12 @@ After the migration, one new table will be present, `comments`.
 
 namespace App;
 
-use webazin\comment\Traits\commentable as comment;
+use webazin\comment\Traits\Commentable as Comment;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements comment
+class Post extends Model implements Comment
 {
-    use comment;
+    use Comment;
 }
 ```
 
