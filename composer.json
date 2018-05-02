@@ -1,5 +1,5 @@
 {
-    "name": "webazin/comment",
+    "name": "webazin/Comment",
     "description": "comments syetem for Laravel 5",
     "keywords": ["comment", "commentable", "laravel"],
     "license": "MIT",
