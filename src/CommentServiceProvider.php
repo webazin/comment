@@ -1,6 +1,6 @@
 <?php 
 
-namespace webain\Comment;
+namespace webazin\Comment;
 
 use Ghanem\Rating\Commands\MigrationCommand;
 use Illuminate\Support\ServiceProvider;
