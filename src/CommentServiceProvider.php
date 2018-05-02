@@ -2,7 +2,7 @@
 
 namespace webazin\Comment;
 
-use Ghanem\Rating\Commands\MigrationCommand;
+use webazin\Comment\Commands\MigrationCommand;
 use Illuminate\Support\ServiceProvider;
 
 class CommentServiceProvider extends ServiceProvider
