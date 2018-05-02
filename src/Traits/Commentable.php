@@ -1,6 +1,6 @@
 <?php
 
-namespace webain\Comment\Traits;
+namespace webazin\Comment\Traits;
 
 use Ghanem\comment\Models\comment;
 use Illuminate\Database\Eloquent\Model;
