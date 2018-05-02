@@ -10,12 +10,12 @@ comment system for laravel 5
 First, pull in the package through Composer.
 
 ```js
-composer require webazin/comment
+composer require webazin/Comment
 ```
 or add this in your project's composer.json file .
 ````
 "require": {
-  "webazin/comment": "1.*",
+  "webazin/Comment": "dev-master",
 }
 ````
 
