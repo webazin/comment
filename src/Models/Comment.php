@@ -14,7 +14,7 @@ class Comment extends Model
     /**
      * @var array
      */
-    protected $fillable = ['comments', 'commentable_id' , 'commentable_type' , 'author_id', 'author_type'];
+    protected $fillable = ['comment', 'commentable_id' , 'commentable_type' , 'author_id', 'author_type'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
@@ -61,13 +61,13 @@ class Comment extends Model
 	 */
     public function createUniqueComment(Model $commentable, $data, Model $author)
     {
+
         $Comment = [
             'author_id' => $author->id,
             'author_type' => get_class($author),
             "commentable_id" => $commentable->id,
             "commentable_type" => get_class($commentable),
         ];
-
         Comment::updateOrCreate($Comment, $data);
         return $Comment;
     }

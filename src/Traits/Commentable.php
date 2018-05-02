@@ -2,7 +2,7 @@
 
 namespace webazin\Comment\Traits;
 
-use Ghanem\comment\Models\comment;
+use webazin\Comment\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
 
 trait Commentable
@@ -12,7 +12,7 @@ trait Commentable
      */
     public function comments()
     {
-        return $this->morphMany(comment::class, 'commentable');
+        return $this->morphMany(Comment::class, 'commentable');
     }
     
 
@@ -22,7 +22,7 @@ trait Commentable
      */
     public function commentCount()
     {
-        return $this->comments()->sum('comment');
+        return $this->comments()->count('comment');
     }
 
 
@@ -34,7 +34,7 @@ trait Commentable
 	 */
     public function comment($data, Model $author)
     {
-        return (new comment())->createComment($this, $data, $author);
+        return (new Comment())->createComment($this, $data, $author);
     }
 
 	/**
@@ -43,9 +43,9 @@ trait Commentable
 	 *
 	 * @return static
 	 */
-    public function commentUnique($data, Model $author)
+    public function commentUnique($data, Model $author )
     {
-        return (new comment())->createUniqueComment($this, $data, $author);
+        return (new Comment())->createUniqueComment($this, $data, $author);
     }
 
 	/**
@@ -56,7 +56,7 @@ trait Commentable
 	 */
     public function updateComment($id, $data)
     {
-        return (new comment())->updateComment($id, $data);
+        return (new Comment())->updateComment($id, $data);
     }
 
     /**
@@ -66,7 +66,7 @@ trait Commentable
      */
     public function deleteComment($id)
     {
-        return (new comment())->deleteComment($id);
+        return (new Comment())->deleteComment($id);
     }
 
 
