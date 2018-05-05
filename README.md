@@ -15,7 +15,7 @@ composer require webazin/Comment
 or add this in your project's composer.json file .
 ````
 "require": {
-  "webazin/Comment": "dev-master",
+  "webazin/Comment": "^1.0",
 }
 ````
 
